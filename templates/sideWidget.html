@@ -1,0 +1,75 @@
+{% load static %}
+<!-- Side widgets-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+</head>
+<div class="col-lg-4">
+
+    <!-- Search widget-->
+    <form action="/" method="GET">
+        <div class="card mb-4">
+            <div class="card-header">Search</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search here"
+                        aria-label="Enter search term..." aria-describedby="button-search" name="q" />
+                    <button class="btn btn-primary" id="button-search" type="submit"><img
+                            src="{% static 'assets/searchlogo.png' %}"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Sort widget-->
+    <form action="/" method="GET">
+        <div class="card mb-4">
+            <div class="card-header">Sort by</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled mb-0">
+                            <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                    value="price">Giá ▲</button>
+                            </li>
+                            <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                    value="-price">Giá ▼</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                        value="area">Diện tích ▲</button>
+                                </li>
+                                <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                        value="-area">Diện tích ▼</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                        value="createTime">Ngày đăng ▲</button>
+                                </li>
+                                <li> <button class="badge bg-secondary text-decoration-none link-light" name="sortBy"
+                                        value="-createTime">Ngày đăng ▼</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+</div>
